@@ -145,6 +145,83 @@ display:block;
 }
 
 }
+    /* ===== FOOTER ===== */
+
+.dnixon-footer{
+background: linear-gradient(135deg,#7b2cff,#2b0066);
+color:white;
+padding:60px 20px;
+}
+
+.footer-container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:40px;
+}
+
+.footer-col p{
+margin:10px 0;
+opacity:0.9;
+cursor:pointer;
+}
+
+.footer-col p:hover{
+opacity:1;
+}
+
+/* ===== LOGO ===== */
+
+.logo-area{
+text-align:left;
+}
+
+.logo-box{
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:15px;
+}
+
+/* DL Gradient Logo */
+.logo-dl{
+font-size:48px;
+font-weight:bold;
+background:linear-gradient(45deg,#ffffff,#b38cff,#ffffff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.logo-text{
+font-size:22px;
+font-weight:bold;
+}
+
+/* ===== ADVERTISE BUTTON ===== */
+
+.advertise-btn{
+margin-top:15px;
+padding:10px 25px;
+border-radius:30px;
+border:none;
+font-weight:bold;
+font-size:16px;
+background:linear-gradient(45deg,#ff4d6d,#ff0000);
+color:white;
+cursor:pointer;
+}
+
+.advertise-btn:hover{
+transform:scale(1.05);
+}
+
+/* COPYRIGHT */
+.copyright{
+margin-top:20px;
+opacity:0.8;
+font-size:14px;
+}
 
 </style>
 </head>
@@ -212,5 +289,60 @@ document.getElementById("menu").classList.toggle("active");
 
 </script>
 
+    <!-- ===== FOOTER START ===== -->
+<footer class="dnixon-footer">
+
+<div class="footer-container">
+
+<!-- LEFT LINKS -->
+<div class="footer-col">
+<p>#Android</p>
+<p>#Windows</p>
+<p>#Internet and Social</p>
+<p>#iOS</p>
+<p>#Gadgets</p>
+<p>#Mac</p>
+<p>#Buying Guides</p>
+</div>
+
+<div class="footer-col">
+<p>#How-tos</p>
+<p>#Comparisons</p>
+<p>#Tips & Tricks</p>
+</div>
+
+<!-- SOCIAL -->
+<div class="footer-col">
+<p>Facebook</p>
+<p>Instagram</p>
+<p>YouTube</p>
+<p>Twitter</p>
+</div>
+
+<!-- LOGO + LINKS -->
+<div class="footer-col logo-area">
+
+<div class="logo-box">
+<span class="logo-dl">DN</span>
+<span class="logo-text">DNIXON</span>
+</div>
+
+<p>About</p>
+<p>Contact</p>
+<p>Terms of Use</p>
+<p>Privacy Policy</p>
+
+<button class="advertise-btn">Advertise</button>
+
+<p class="copyright">
+© 2026 DNIXON Media. All Rights Reserved.
+</p>
+
+</div>
+
+</div>
+
+</footer>
+<!-- ===== FOOTER END ===== -->
 </body>
 </html>
