@@ -240,6 +240,29 @@ margin-top:20px;
 opacity:0.8;
 font-size:14px;
 }
+/* ===== CURVED LATEST NEWS ===== */
+.curved-text{
+  width: 300px;  
+  height: 150px;
+  margin: 40px auto;
+  position: relative;
+  font-weight: bold;
+  font-size: 28px;
+  color: #ffffff;
+  text-align: center;
+  transform: translateY(50px);
+}
+
+.curved-text span{
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform-origin: 0 100%;
+  color: #ffffff;
+  -webkit-text-stroke: 1.5px #000000;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  font-family: 'Arial Black', Gadget, sans-serif;
+}
 
 </style>
 </head>
@@ -289,7 +312,7 @@ font-size:14px;
 <!-- ===== CONTENT ===== -->
 <div class="container">
 
-<div class="news-title">Amarjeet Kumar</div>
+<div class="news-title curved-text" data-text="LATEST NEWS"></div>
 
 <div class="card">
 <img src="https://i.ibb.co/4f5T7w2/portfolio-temp.jpg" alt="Amarjeet Portfolio">
@@ -362,5 +385,25 @@ document.getElementById("menu").classList.toggle("active");
 
 </footer>
 <!-- ===== FOOTER END ===== -->
+<script>
+// Curved text effect
+const curvedTextDiv = document.querySelector('.curved-text');
+const text = curvedTextDiv.dataset.text;
+curvedTextDiv.innerHTML = '';
+
+const radius = 120; // radius of the arc
+const startAngle = -60; 
+const endAngle = 60; 
+const angleStep = (endAngle - startAngle) / (text.length - 1);
+
+text.split('').forEach((char, i) => {
+  const span = document.createElement('span');
+  span.innerText = char;
+  const angle = startAngle + (angleStep * i);
+  span.style.transform = `rotate(${angle}deg) translate(${radius}px) rotate(${angle * -1}deg)`;
+  curvedTextDiv.appendChild(span);
+});
+</script>
+
 </body>
 </html>
