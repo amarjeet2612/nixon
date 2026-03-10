@@ -1,21 +1,208 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>DNIXON Tech</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tech Website</title>
 
-<link rel="stylesheet" href="style.css">
+<style>
 
+/* ===== RESET ===== */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+/* ===== HEADER ===== */
+header{
+background: linear-gradient(135deg,#007bff,#001f4d);
+color:white;
+padding:15px 20px;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+/* Logo */
+.logo{
+font-size:24px;
+font-weight:bold;
+letter-spacing:1px;
+}
+
+/* Menu */
+.nav-links{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+.nav-links li{
+cursor:pointer;
+transition:0.3s;
+}
+
+.nav-links li:hover{
+color:#00e0ff;
+}
+
+/* Icons */
+.menu-btn{
+font-size:26px;
+cursor:pointer;
+display:none;
+}
+
+/* ===== HERO SECTION ===== */
+.hero{
+background: linear-gradient(135deg,#007bff,#001f4d);
+color:white;
+text-align:center;
+padding:60px 20px;
+}
+
+.hero h1{
+font-size:28px;
+margin-bottom:20px;
+}
+
+.stats{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.stat{
+font-size:22px;
+font-weight:bold;
+}
+
+.stat span{
+display:block;
+font-size:14px;
+opacity:0.8;
+}
+
+/* ===== CONTENT ===== */
+.container{
+padding:30px 20px;
+}
+
+.news-title{
+font-size:26px;
+font-weight:bold;
+margin-bottom:20px;
+}
+
+.card{
+max-width:600px;
+margin:auto;
+box-shadow:0 4px 12px rgba(0,0,0,0.2);
+border-radius:10px;
+overflow:hidden;
+}
+
+.card img{
+width:100%;
+}
+
+.card h2{
+padding:15px;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+
+.nav-links{
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:#001f4d;
+flex-direction:column;
+text-align:center;
+display:none;
+padding:20px 0;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.menu-btn{
+display:block;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
-<h1>My First Website</h1>
+<!-- ===== HEADER ===== -->
+<header>
 
-<button onclick="showMessage()">Click Me</button>
+<div class="navbar">
+<div class="logo">TechGuide</div>
 
-<script src="script.js"></script>
+<ul class="nav-links" id="menu">
+<li>Android</li>
+<li>Windows</li>
+<li>Internet</li>
+<li>iOS</li>
+<li>Gadgets</li>
+<li>Mac</li>
+<li>Buying Guides</li>
+</ul>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+</div>
+
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+<h1>Helping millions of people navigate the world of technology.</h1>
+
+<div class="stats">
+<div class="stat">60M+<span>Annual Readers</span></div>
+<div class="stat">6,000+<span>Guides & Reviews</span></div>
+<div class="stat">5,400+<span>Tech Videos</span></div>
+</div>
+</section>
+
+<!-- ===== CONTENT ===== -->
+<div class="container">
+
+<div class="news-title">🔴 LATEST NEWS</div>
+
+<div class="card">
+<img src="https://picsum.photos/800/400" alt="news">
+<h2>Installing Graphics Driver From Scratch Step by Step</h2>
+</div>
+
+</div>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+
+</script>
 
 </body>
 </html>
