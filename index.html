@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -153,7 +154,10 @@ display:block;
 }
 
 .card img{
-  width:100%;
+width:100%;
+height:350px;
+object-fit:cover;
+border-radius:10px 10px 0 0;
 }
 
 .card h2{
@@ -271,7 +275,35 @@ font-weight:bold;
 margin:25px 0;
 letter-spacing:2px;
 }
-  
+ /* ===== SEARCH BOX CURVED STYLE ===== */
+
+.search-container{
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.search-box{
+padding:10px 18px;
+border:none;
+outline:none;
+
+border-radius:30px;   /* ⭐ MAGIC (curve) */
+
+width:180px;
+transition:0.3s;
+
+background:#ffffff;
+color:#000;
+font-size:14px;
+}
+
+/* focus effect */
+.search-box:focus{
+width:230px;
+box-shadow:0 0 8px rgba(0,0,0,0.3);
+}
+ 
 </style>
 </head>
 
@@ -292,13 +324,13 @@ letter-spacing:2px;
 
 </div>
 <ul class="nav-links" id="menu">
-<li>Android</li>
-<li>Windows</li>
-<li>Internet</li>
-<li>iOS</li>
-<li>Gadgets</li>
-<li>Mac</li>
-<li>Buying Guides</li>
+<li>Home</li>
+<li>Blog</li>
+<li>2D,3D Design</li>
+<li>Videos</li>
+<li>Media</li>
+<li>Tech</li>
+<li>Our Team</li>
 </ul>
 
 <div class="menu-btn" onclick="toggleMenu()">☰</div>
@@ -309,11 +341,11 @@ letter-spacing:2px;
 <!-- ===== HERO ===== -->
 <section class="hero">
 <h1>2D,3D Editor | Autocad,Sketchup</h1>
-<h1>Video Edits Using Capcut Pc,Davinci Resolve.</h1>
+<h1>Video Edits Using Capcut,Davinci Resolve.</h1>
 
 <div class="stats">
 <div class="stat">50M+<span>Annual Viewers</span></div>
-<div class="stat">1,000+<span>Guides & Reviews</span></div>
+<div class="stat">1,000+<span>Work</span></div>
 <div class="stat">100+<span>YT Videos</span></div>
 </div>
 </section>
@@ -324,7 +356,7 @@ letter-spacing:2px;
 <div class="news-title">AMARJEET KUMAR</div>
 
 <div class="card">
-<img src="https://i.ibb.co/4f5T7w2/portfolio-temp.jpg" alt="Amarjeet Portfolio">
+<img src="./portfolio.png" alt="Amarjeet Kumar Portfolio">
 <h2>Amarjeet Kumar Portfolio</h2>
 </div>
 
@@ -346,13 +378,13 @@ document.getElementById("menu").classList.toggle("active");
 
 <!-- LEFT LINKS -->
 <div class="footer-col">
-<p>#Android</p>
-<p>#Windows</p>
-<p>#Internet and Social</p>
-<p>#iOS</p>
-<p>#Gadgets</p>
-<p>#Mac</p>
-<p>#Buying Guides</p>
+<p>#Home</p>
+<p>#Blog</p>
+<p>#2D,3D Design</p>
+<p>#Video</p>
+<p>#Media</p>
+<p>#Tech</p>
+<p>#Our Team</p>
 </div>
 
 <div class="footer-col">
